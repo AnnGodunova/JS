@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.post('/sum', function(req, res) {
-    console.log('sum');
+    console.log('sum a+b');
     var sum = 0
     sum = parseInt(req.body.a) + parseInt(req.body.b)
     res.status(200).json({ message: sum});
