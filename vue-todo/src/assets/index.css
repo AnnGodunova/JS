@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope/Manrope-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(114, 174, 231);
+}
+
+#app {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale ;
+    text-align: center;
+    padding: 120px 20px 40px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.base-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+    justify-content: flex-start;
+}
+
+.page-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10px;
+    align-items: center;
+    
+}
+
+.page-title {
+    font-size:  32px;
+    color: azure;
+    font-weight: 800;
+    text-align: center;
+}
+
+.auth-form {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    min-height: 300px;
+    padding: 32px 24px;
+}
+
+.form-field{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: left;
+    gap: 16px;
+}
+
+.form-field input {
+    border: 1px solid grey;
+    padding: 12 px 24px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.submit-btn {
+    margin-top:  32px;
+    padding: 12px 34px;
+    background: #2c3e50;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.auth-form .action-link {
+    margin-top: 16px;
+}
+
+.link-btm {
+    cursor: pointer;
+}
+
+.todo-item {
+    width: 100%;
+    padding: 20px 32px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 16px;
+}
+
+.todo-item .actions {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.todo-item .title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.todo-item .checkbox{
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #adb5bd;
+    border-radius: 12px;
+}
+
+.todo-item button{
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border-radius: 2px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 700;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.todo-item button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.todo-item.done {
+    opacity: 0.7;
+}
+
+.todo-item.done .title {
+    text-decoration: line-through;
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-inline-start: 0px;
+}
+
+.create-todo {
+    font-size: 30px;
+    font-weight: 700;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.create-todo button {
+    cursor: pointer;
+    border: 1px solid rgb(160, 160, 160);
+    background: rgb(69, 170, 69);
+    padding: 16px 24px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.create-todo input {
+    border: 1px solid gray;
+    padding: 16px, 24px;
+    border-radius: 16px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.separator {
+    margin-top: 40px;
+    padding: 6px 20px;
+    width: 100%;
+}
+
+#nav {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    margin-bottom: 8px;
+    box-shadow: 0 0 12px 0 #2c3e50;
+  }
+  .link-wrapper{
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      max-width: 700px;
+      padding: 12px 24px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+  }
+  .nav-links {
+    padding: 4px;
+  }
+  .nav-link {
+      color: #516f8d;
+      margin-left: 16px;
+      margin-right: 16px;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+  }
+  a {
+      color: #516f8d;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+  }
+  a:hover {
+      color: #2c3e50;
+  }
+  a:active {
+      color: #2c3e50;
+  }
+  .router-link-active{
+      color: red;
+  }
+
+
+  .auth-layout{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-layout {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+  h3 {
+    margin: 40px 0 0;
+  }
+
+  div.card {
+    width: 312px;
+    height: 256px;
+    padding: 8px;
+    margin: 10px auto;
+    border: 1px solid rgb(18, 8, 78);
+    border-radius: 12px;
+    background-color: rgb(19, 39, 95);
+    box-shadow: 4px 4px 4px 0px grey;
+  }
+  div.info label {
+    display: inline-flex;
+    width: 30%;
+    margin: 4px auto;
+    font-size: 12px;
+    color: aliceblue;
+  }
+  div.info {
+    text-align: right;
+    font-size: 12px;
+  }
+
+
+  .form-field-2 label {
+    display: inline-flex;
+    width: 30%;
+    margin: 4px auto;
+    font-size: 12px;
+    color: aliceblue;
+  }
+  .form-field-2 input:hover {
+    border: 2px solid rgb(65, 183, 131);
+  }
+  .form-field-2 input {
+    outline: none;
+    line-height: 20px;
+    width: 70%;
+    margin: 4px auto; 
+  }
+  div.form-field-2 {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  
+.card button {
+    margin: 4px auto;
+    align-self: center;
+  }
+  .card button:hover {
+    width: 100%;
+    height: 100%;
+  }
